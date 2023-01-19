@@ -120,6 +120,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   let contador =0; 
+   for (let i=0; i <array.length; i++) {
+      if (array [i] > 18 ) {
+         contador ++;
+      }
+   }
+   return contador;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -127,18 +134,36 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   if (numeroDeDia === 1 || numeroDeDia ===7) {
+      return "Es fin de semana";
+   } else {
+      return "Es dia laboral";
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
+   let nue =num.toString ()
+   if (nue.charAt (0)=== "9"){
+
+      return true; 
+   } else {
+      return false;
+   }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar True.
    // Caso contrario retornar False.
    // Tu código:
+   for (var i=0; i < array.length -1; i++) {
+      if (array [i] !== array [i+1]) {
+         return false;
+      }
+   }
+   return true; 
 }
 
 function mesesDelAño(array) {
@@ -146,18 +171,43 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   var nuevoArray =[]; 
+   for (let i=0; i<array.length; i++) {
+      if (array [i]==="Enero"|| array [i]==="Marzo" || array [i]=== "Noviembre"){
+
+         nuevoArray.push (array [i]);
+      }
+   }
+   if (nuevoArray.length < 3){
+      return "No se encontraron los meses pedidos";
+   } else {
+      return nuevoArray;
+   }
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let resultados =[];
+
+   for (let i=0; i<=10; i++){
+      resultados.push (i * 6);
+   }
+   return resultados; 
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   var nuevoArray =[];
+   for (let i=0; i <array.length; i++) {
+      if (array [i] > 100) {
+         nuevoArray.push (array [i]);
+      }
+   }
+   return nuevoArray;
 }
 
 /* ----------------------------------------------------------------------------------
